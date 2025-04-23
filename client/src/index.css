@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Add these global styles to your index.css or an appropriate style file */
+button, 
+a[href], 
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Add this to ensure your delete button specifically has the pointer cursor */
+.inline-flex.items-center.px-3.py-1\.5.bg-red-100 {
+  cursor: pointer !important;
+}

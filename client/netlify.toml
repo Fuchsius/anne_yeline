@@ -1,0 +1,27 @@
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+  
+[build.environment]
+  # Define environment variables that aren't sensitive
+  NODE_ENV = "production"
+  # Other public environment variables
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+  targetPort = 5173
+
+# Uncomment this section if you need image optimization
+# [[plugins]]
+#   package = "netlify-plugin-image-optim"
+
+# Handle SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
